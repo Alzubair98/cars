@@ -1,5 +1,5 @@
 const CarForm = () => {
-  return <div>car Form</div>;
+  return <div>Car Form</div>;
 };
 
 export default CarForm;
