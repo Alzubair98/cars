@@ -1,5 +1,13 @@
 const CarSearch = () => {
-  return <div>Car Search</div>;
+  return (
+    <div className="">
+      <h1>My Cars</h1>
+      <form>
+        <label>Search</label>
+        <input />
+      </form>
+    </div>
+  );
 };
 
 export default CarSearch;

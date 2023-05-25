@@ -5,7 +5,8 @@ import CarValue from "./components/CarValue";
 function App() {
   return (
     <div>
-      <CarForm /> <CarList />
+      <CarForm />
+      <CarList />
       <CarSearch />
       <CarValue />
     </div>
