@@ -9,7 +9,7 @@ const CarList = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="car-list">
       {cars.map((car) => {
         return (
           <div key={car.id} className="panel">
@@ -26,7 +26,8 @@ const CarList = () => {
             </button>
           </div>
         );
-      })}
+      })}{" "}
+      <hr />
     </div>
   );
 };
