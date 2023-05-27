@@ -19,15 +19,22 @@ const carsSlice = createSlice({
         id: nanoid(),
       });
     },
+
     removeCar(state, action) {
       // Assumption:
       // action.payload == the id of the car we want to remove
 
-      const updated = state.cars.filter((car) => {
-        car.id !== action.payload;
-      });
+      const index = state.cars.indexOf(action.payload);
 
-      state.cars = updated;
+      state.cars.splice(index, 1);
+
+      // const updated = state.cars.filter((car) => {
+      //   action.payload !== car.id;
+      // });
+
+      // console.log(updated);
+
+      // state.cars = updated;
     },
   },
 });

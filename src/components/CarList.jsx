@@ -8,6 +8,10 @@ const CarList = () => {
 
   const dispatch = useDispatch();
 
+  const handleCarDelete = (car) => {
+    dispatch(removeCar(car));
+  };
+
   return (
     <div className="car-list">
       {cars.map((car) => {
@@ -19,7 +23,7 @@ const CarList = () => {
             <button
               className="button is-danger"
               onClick={() => {
-                dispatch(removeCar(car.id));
+                handleCarDelete(car);
               }}
             >
               Delete
