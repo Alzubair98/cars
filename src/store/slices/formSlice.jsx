@@ -10,7 +10,7 @@ const formSlice = createSlice({
     changeName(state, action) {
       state.name = action.payload;
     },
-    changeConst(state, action) {
+    changeCost(state, action) {
       state.cost = action.payload;
     },
   },
