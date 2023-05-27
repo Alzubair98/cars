@@ -8,10 +8,10 @@ const CarForm = () => {
 
   const dispatch = useDispatch();
 
-  console.log(state);
   const handleNameChange = (event) => {
     dispatch(changeName(event.target.value));
   };
+
   return (
     <div className="car-form panel">
       <h4 className="subtitle is-3">Add Var</h4>
@@ -32,10 +32,9 @@ const CarForm = () => {
                 dispatch(changeCost(e.target.value));
               }}
             />
+            <button>submit</button>
           </div>
         </div>
-
-        <button>submit</button>
       </form>
     </div>
   );
