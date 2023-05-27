@@ -32,7 +32,7 @@ const CarForm = () => {
                 dispatch(changeName(e.target.value));
               }}
             />
-            <label className="label">Car Cost</label>
+            <label className="label">Cost</label>
             <input
               className="input is-expanded"
               value={cost || ""}
