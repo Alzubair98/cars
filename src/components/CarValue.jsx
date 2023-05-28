@@ -6,7 +6,7 @@ const CarValue = () => {
       return car.cost;
     });
   });
-  console.log(cost);
+
   const sum = cost.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
     0
