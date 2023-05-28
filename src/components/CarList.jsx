@@ -2,8 +2,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeCar } from "../store";
 
 const CarList = () => {
-  const cars = useSelector((state) => {
-    return state.cars.cars;
+  const cars = useSelector(({ cars: { cars, searchTerm } }) => {
+    return cars.filter((car) =>
+      car.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   });
 
   const dispatch = useDispatch();
