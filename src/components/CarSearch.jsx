@@ -8,8 +8,6 @@ const CarSearch = () => {
 
   const dispatch = useDispatch();
 
-  console.log("search term", searchTerm);
-
   const handleSearchTermChange = (e) => {
     e.preventDefault();
     dispatch(changeSearchTerm(e.target.value));
