@@ -1,23 +1,17 @@
 import { useSelector } from "react-redux";
 
 const CarValue = () => {
-  const cost = useSelector((state) => {
-    return state.cars.cars.map((car) => {
-      return car.cost;
+  const cost = useSelector(({ cars: { cars, searchTerm } }) => {
+    const filterdCars = cars.filter((car) => {
+      return car.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
+
+    return filterdCars.reduce((acc, car) => {
+      return acc + car.cost;
+    }, 0);
   });
 
-  const sum = cost.reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
-    0
-  );
-
-  return (
-    <div>
-      {" "}
-      <h3>Total Value : ${sum}</h3>
-    </div>
-  );
+  return <div className="car-value">Total Cost : ${cost}</div>;
 };
 
 export default CarValue;
